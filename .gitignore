@@ -3,3 +3,12 @@
 
 # Ignore Gradle build output directory
 build
+
+# jdtls
+app/.classpath
+app/.project
+app/.settings
+app/bin
+/.settings
+
+kls_database.db
