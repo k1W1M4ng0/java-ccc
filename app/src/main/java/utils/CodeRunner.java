@@ -2,6 +2,8 @@ package utils;
 
 import java.util.function.Function;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
@@ -32,7 +34,10 @@ public class CodeRunner {
     public static String formatExampleOut = "level{level}_example2.out";
     public static String formatLevelFolder = "level{level}";
 
+    // whether the file output should be printed
     public static boolean printOutput = true;
+    // whether the output should be trimmed before writing to file
+    public static boolean trimOutput = true;
 
     /**
      * Runs a method for a single file in a coding contest level.
@@ -132,7 +137,11 @@ public class CodeRunner {
                 System.out.println(textToWrite);
             }
 
-            ReaderWriter.save(textToWrite, filenameOut);
+            if (CodeRunner.trimOutput) {
+                ReaderWriter.saveTrimmed(textToWrite, filenameOut);
+            } else {
+                ReaderWriter.save(textToWrite, filenameOut);
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
