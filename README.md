@@ -14,13 +14,17 @@ cd java-ccc
 The file structure should be:
 
 ```
+...
+app
 files
-└── level1
-    ├── level1_1.in
+└── level1 (formatLevelFolder)
+    ├── level1_1.in     (formatIn)
     ├── level1_2.in
     ├── level1_3.in
     ├── level1_4.in
-    └── level1_5.in
+    ├── level1_5.in
+    └── level1_1_example.in (formatExampleIn)
+...
 ```
 
 ### 3. Configure CodeRunner 
