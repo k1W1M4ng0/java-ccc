@@ -10,5 +10,6 @@ app/.project
 app/.settings
 app/bin
 /.settings
+.project
 
 kls_database.db
