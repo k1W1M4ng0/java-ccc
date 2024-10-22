@@ -21,7 +21,9 @@ public class Main {
         // CodeRunner.trimOutput = true;        // whether the output should be trimmed before writing to file 
         // CodeRunner.printOutput = true;       // whether the file output should be printed
 
+        /****** Run testcases ********/
 
+        // CodeRunner.runExample("../files", 1, Main::level1);
         // CodeRunner.runCase("../files", 1, 1, Main::level1);
         CodeRunner.runAllCases("../files", 1, 3, Main::level1);
     }
